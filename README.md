@@ -9,7 +9,7 @@ Este repositorio contiene la API REST de un sistema RAG (Retrieval-Augmented Gen
 ### 1. Clona el repositorio
 
 ```bash
-git clone https://github.com/hacku-team/hacku-rag.git
+git clone https://github.com/MadridBuilesRicardo/hacku-rag.git
 cd hacku-rag
 2. Crea un entorno virtual (opcional pero recomendado)
 python3 -m venv venv
