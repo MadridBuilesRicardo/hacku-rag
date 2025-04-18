@@ -81,6 +81,31 @@ Se aplica una instrucción system_instruction.txt exclusiva por cliente.
 Se genera la respuesta usando gpt-4o-mini de OpenAI vía LangChain.
 Se devuelven los resultados junto a las fuentes utilizadas.
 
+🐳 Dockerización y despliegue local
+Este sistema ya está completamente dockerizado para facilitar su despliegue en ambientes de desarrollo, staging o producción.
+
+🔧 Requisitos
+Tener instalado Docker y Docker Compose
+
+▶️ Levantar todo el entorno localmente
+bash
+docker-compose up --build
+
+Esto:
+Construye el contenedor del backend con FastAPI (uvicorn)
+
+Expone la API en http://localhost:8001
+
+La app correrá por defecto con gpt-4o-mini y cargará automáticamente los agentes desde la carpeta clientes.
+
+📦 Archivos relevantes
+Dockerfile: define el entorno de ejecución (Python 3.11, instalación de dependencias, y ejecución de Uvicorn)
+
+docker-compose.yml: orquesta la ejecución del contenedor principal (hacku-rag) y en el futuro incluirá servicios como Redis o bases de datos si se requieren
+
+.dockerignore: evita copiar archivos innecesarios al contenedor, como venv/, .env, __pycache__/, etc.
+
+
 El sistema usa ChromaDB como vector store local, con limpieza automática de PDFs y segmentación optimizada vía SentenceTransformersTokenTextSplitter.
 
 🛠 Tecnologías utilizadas
