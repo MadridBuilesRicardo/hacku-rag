@@ -1,0 +1,17 @@
+# Ignora entorno virtual
+venv/
+__pycache__/
+
+# Ignora archivos temporales y compilados
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de configuración sensibles
+.env
+
+# Bases de datos locales (ChromaDB)
+**/chroma_db/
+
+# Archivos del sistema
+.DS_Store
